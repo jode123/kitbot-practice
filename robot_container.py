@@ -5,7 +5,6 @@ import wpilib
 import wpilib.drive
 from subsystem.mec_drive import MecanumDrive
 
-
 class RobotContainer:
     fr = 1
     fl = 2
@@ -19,7 +18,7 @@ class RobotContainer:
         self.blwheel = wpilib.Spark(self.bl)
         self.stick = wpilib.DigitalInput(0)
         self.frwheel.setInverted(True)
-        self.flwheel.setInverted(True)
+        self.brwheel.setInverted(True)
         self.robotdrive = MecanumDrive(self.frwheel, self.flwheel, self.brwheel, self.blwheel)
         self.joystick = commands2.button.CommandJoystick(0)
         self.configureButtonBindings()
