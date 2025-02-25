@@ -29,9 +29,9 @@ class RobotContainer:
         self.robotdrive.setDefaultCommand(
             self.robotdrive.applyRequest(
                 lambda: self.robotdrive.drive(
-                    int(self.joystick.getX()),
-                    int(self.joystick.getY()),
-                    int(self.joystick.getZ() / 2),
+                    self.joystick.getX(),
+                    self.joystick.getY(),
+                    self.joystick.getZ() / 2,
                 )
             )
         )
